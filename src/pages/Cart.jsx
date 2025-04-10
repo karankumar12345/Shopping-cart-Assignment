@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -51,7 +50,7 @@ const Cart = () => {
       ) : (
         <>
           {cartItems.map((item) => (
-            <Link to={`/product/${item.id}`}
+            <div
               key={item.id}
               className="flex items-center justify-between border p-4 mb-4 rounded-lg shadow"
             >
@@ -83,7 +82,7 @@ const Cart = () => {
               >
                 Remove
               </button>
-            </Link>
+            </div>
           ))}
 
           {/* Total & Checkout */}
